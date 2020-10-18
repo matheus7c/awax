@@ -1,3 +1,32 @@
+// Menu opener
+//Fecha o menu tablet e mobile
+function closeMenu(){
+    console.log('fechou');
+    document.querySelector('nav').style.opacity = 0;
+    setTimeout(() => {
+        document.querySelector('nav').style.display ='none';
+    }, 200);
+    
+}
+//Abri o menu talbet e mobile
+function openMenu(){
+    console.log('abriu');
+    document.querySelector('nav').style.opacity = 1;
+    setTimeout(() => {
+        document.querySelector('nav').style.display ='block';
+    }, 200);
+}
+//Adiciona a função de botão e decidi entre abrir e fechar o menu
+document.querySelector('.menu-opener').addEventListener('click', ()=>{
+    if (document.querySelector('nav').style.display == 'block'){
+        closeMenu();
+    }else if(document.querySelector('nav').style.display = 'none'){
+        openMenu();
+    }
+});
+// ./Menu opener
+
+// Banner Slider
 let totalSliders = document.getElementsByClassName('sliders')[0].clientWidth;
 console.log (totalSliders)
 let slider = document.getElementsByClassName('slide')[0].clientWidth;
@@ -32,7 +61,7 @@ function nextSlide(){
 pointer = document.querySelectorAll('.banner .sliders-pointers .pointer');
 console.log(pointer);
 
-
+// ./Banner Slider
 
 
 // document.querySelectorAll('.pointer').forEach((size, sizeIndex)=>{
